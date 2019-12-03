@@ -19,12 +19,16 @@ Set pool params in app/globals.js.default and copy to app/globals.js
 Requires NodeJS
 
 ```sh
-$ npm start # starts gulp + livereload, serves from ./build on 8080
+npm start # starts gulp + livereload, serves from ./build on 8080
 ```
 
 ## Deploy
 ```sh
-$ npm install # runs everything, serve from ./build
+npm install # runs everything, serve from ./build
+./node_modules/bower/bin/bower update
+./node_modules/gulp/bin/gulp.js build
+cd build
+sudo ln -s `pwd` /var/www
 ```
 
 ### Todo
