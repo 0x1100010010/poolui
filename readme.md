@@ -24,7 +24,12 @@ $ npm start # starts gulp + livereload, serves from ./build on 8080
 
 ## Deploy
 ```sh
-$ npm install # runs everything, serve from ./build
+$ cd ~ && git clone https://github.com/nayabraheel/poolui.git
+$ cd poolui && npm install 
+$ ./node_modules/bower/bin/bower update
+$ ./node_modules/gulp/bin/gulp.js build 
+$ cd build && sudo ln -s `pwd` /var/www
+
 ```
 
 ### Todo
